@@ -18,7 +18,7 @@ double SPEED = 0.02;
 int score = 0;
 int score2 = 0;
 
-static GLint paddleBoundary = 200, paddleHeight = 40, paddleVel = 10;
+static GLint paddleBoundary = 200, paddleHeight = 40, paddleVel = 10, paddleWidth = 10;
 static GLint p1_PaddleY = 50, p2_PaddleY = 50, p1_PaddleX = 140,p2_PaddleX = 20;
 
 /*
@@ -60,11 +60,19 @@ void drawPaddle(int x, int y) {
 
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
-	int height = paddleHeight / 2;
+	//int height = paddleHeight / 2;
+	/*
 	glVertex2f(-5, height);
 	glVertex2f(5, height);
 	glVertex2f(5, -height);
 	glVertex2f(-5, -height);
+	*/
+
+	glVertex2f(0, 0);
+	glVertex2f(paddleWidth, 0);
+	glVertex2f(paddleWidth, paddleHeight);
+	glVertex2f(0, paddleHeight);
+
 	glEnd();
 
 	glPopMatrix();
@@ -118,11 +126,18 @@ void drawPaddle2(int x, int y) {
 
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
+	/*
 	int height = paddleHeight / 2;
 	glVertex2f(-5, height);
 	glVertex2f(5, height);
 	glVertex2f(5, -height);
 	glVertex2f(-5, -height);
+	*/
+
+	glVertex2f(0, 0);
+	glVertex2f(paddleWidth, 0);
+	glVertex2f(paddleWidth, paddleHeight);
+	glVertex2f(0, paddleHeight);
 	glEnd();
 
 	glPopMatrix();
@@ -171,7 +186,7 @@ void ball_Update()
 		
 
 	
-	if (xpos + RadiusOfBall >= p1_PaddleX)
+	if (xpos + RadiusOfBall >= p1_PaddleX + paddleWidth)
 	{
 		if (ypos < p1_PaddleY + paddleHeight && ypos > p1_PaddleY - paddleHeight ) 
 		{
@@ -180,7 +195,7 @@ void ball_Update()
 		
 	}
 
-	else if (xpos - RadiusOfBall <= p2_PaddleX)
+	else if (xpos - RadiusOfBall <= p2_PaddleX + paddleWidth)
 	{
 		if (ypos < p2_PaddleY + paddleHeight && ypos > p2_PaddleY - paddleHeight)
 		{
