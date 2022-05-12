@@ -1,0 +1,5 @@
+﻿  Source.cpp
+D:\Gustavo Rojas Tovar\escritorio\Project_Rotating_Camera\Project_3DTriangle\Project_3DTriangle\Source.cpp(162,1): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+  utils.cpp
+  Generando código...
+  Project_3DTriangle.vcxproj -> D:\Gustavo Rojas Tovar\escritorio\Project_Rotating_Camera\Project_3DTriangle\Debug\Project_3DTriangle.exe

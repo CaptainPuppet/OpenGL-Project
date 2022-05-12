@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Maq10\Desktop\OpenGL_3DProject\Project_3DTriangle\Project_3DTriangle\Source.cpp(112,1): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+LINK : fatal error LNK1104: no se puede abrir el archivo 'glut32.lib'
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1092,5): error MSB6006: "link.exe" salió con el código 1104.
